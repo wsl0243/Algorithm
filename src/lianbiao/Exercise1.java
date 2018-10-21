@@ -36,14 +36,14 @@ public class Exercise1 {
 
     public static void main(String[] args) {
             Node head1 = new Node();
-            Node node3 = new Node(8);
-            Node node2 = new Node(6,node3);
-            Node node1 = new Node(7,node2);
+            Node node3 = new Node(3);
+            Node node2 = new Node(4,node3);
+            Node node1 = new Node(2,node2);
             head1.next=node1;
             Node head2 = new Node();
-            Node node6 = new Node(5);
-            Node node5 = new Node(4,node6);
-            Node node4 = new Node(3,node5);
+            Node node6 = new Node(4);
+            Node node5 = new Node(6,node6);
+            Node node4 = new Node(5,node5);
             head2.next=node4;
             Node sum = sum(head1, head2, new Node());
             System.out.println(sum);
@@ -61,10 +61,14 @@ public class Exercise1 {
                     Integer value2=null;
                     if(node1==null){
                         value1=0;
+                        value2 = node2.value;
                     }
-                    if (node1==null){
+                    if (node2==null){
                         value2=0;
-                    }else {
+                        value1 = node1.value;
+
+                    }
+                    if(node1!=null&&node2!=null){
                         value1 = node1.value;
                         value2 = node2.value;
                     }
