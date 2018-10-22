@@ -19,7 +19,6 @@ public class Node{
         this.next=next;
     }
     public Node(){
-        this.value=value;
     }
 
     public static void print(Node head) {
