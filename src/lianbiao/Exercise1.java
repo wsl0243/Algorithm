@@ -11,42 +11,16 @@ package lianbiao;
  * @create: 2018-10-21 17:10
  **/
 public class Exercise1 {
-    static class Node{
-        private Integer value;
-        private Node next;
-        public Node(Integer value){
-            this.value=value;
-        }
-        public Node(Integer value,Node next){
-            this.value=value;
-            this.next=next;
-        }
-        public Node(){
-            this.value=value;
-        }
-
-        @Override
-        public String toString() {
-            return "Node{" +
-                    "value=" + value +
-                    ", next=" + next +
-                    '}';
-        }
-    }
 
     public static void main(String[] args) {
-            Node head1 = new Node();
-            Node node3 = new Node(9);
-            Node node2 = new Node(9,node3);
-            Node node1 = new Node(9,node2);
-            head1.next=node1;
-            Node head2 = new Node();
-            Node node6 = new Node(9);
-            Node node5 = new Node(9,node6);
-            Node node4 = new Node(9,node5);
-            head2.next=node4;
-            Node sum = sum(head1, head2, new Node());
-            System.out.println(sum);
+           Node head1= new Node();
+           head1.makeLinkedList(head1,3);
+           Node head2= new Node();
+           head1.makeLinkedList(head2,3);
+           Node.print(head1);
+           Node.print(head2);
+           Node sum = sum(head1, head2, new Node());
+           Node.print(sum);
 
     }
     //思路：从头遍历两个链表，对应的位置相加，定义一个进位变量，如果有进位，保存在变量中，最后得到一个新链表
