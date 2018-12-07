@@ -9,7 +9,7 @@ package lianbiao;
  * @author: Wsl
  * @create: 2018-10-28 15:16
  **/
-//思路:从头遍历一遍链表，两指针p1 p2，小于x的放在p1后面，大于等于x的放在p2后面，最后头尾相连。
+//思路:从头遍历一遍链表，找到第一个大于等于x的节点和它的前驱节点，用变量记录，后续节点小于x的放到他的前面。
 public class Exercise3 {
     public static void main(String[] args) {
         Node head = new Node();
